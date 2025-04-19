@@ -1,0 +1,182 @@
+.game-setup {
+  width: 100%;
+  max-width: 500px;
+}
+
+.setup-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.setup-card h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.form-section {
+  margin-bottom: 24px;
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.color-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.color-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.color-option:hover {
+  background-color: #f0f4f8;
+}
+
+.color-option.selected {
+  border-color: #3498db;
+  background-color: #ebf5ff;
+}
+
+.color-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.color-circle.white {
+  background-color: #fff;
+}
+
+.color-circle.black {
+  background-color: #333;
+}
+
+.color-circle.random {
+  background: linear-gradient(135deg, #fff 50%, #333 50%);
+}
+
+.difficulty-slider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.difficulty-label {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 40px;
+}
+
+.slider {
+  flex: 1;
+  height: 4px;
+  -webkit-appearance: none;
+  width: 100%;
+  background: #d3d3d3;
+  outline: none;
+  border-radius: 2px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3498db;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.start-game-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 16px;
+}
+
+.start-game-btn:hover {
+  background-color: #F5F5DC;
+}
+
+.start-game-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .setup-card {
+    padding: 24px 16px;
+  }
+  
+  .color-options {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .color-option {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 12px;
+  }
+  
+  .color-circle {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+  }
+}
