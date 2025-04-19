@@ -1,1 +1,0 @@
-importScripts('https://cdn.jsdelivr.net/npm/stockfish@11/src/stockfish.js');
